@@ -1,7 +1,12 @@
 app.controller('categCtrl',['$scope' , '$routeParams','Lista' ,function($scope,$routeParams,Lista ){
     $scope.ListaItems=Lista;
+    $scope.itemsSel={};
+
     $scope.search=$routeParams.Categoria
-    console.log(  $scope.ListaItems);
+    $scope.AbrirModal = function (items){
+         angular.copy(items,$scope.itemsSel);
+         $("#modal_item").modal();
+     }
 
 
 }]);

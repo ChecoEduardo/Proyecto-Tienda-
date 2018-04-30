@@ -6,7 +6,7 @@ app.factory('Lista',['$http',function($http){
                items:[{
                   Sku: 1,NomProd: "Digital Storage Oscilloscope",Ctg: "IDM",
                   Img:"Image/Osciloscopio.jpg",Popular: 3 ,Precio:7744 ,
-                  Descripcion:"Siglent Technologies SDS1102CML+ Digital Storage Oscilloscope, 100 MHz " },{
+                  Descripcion:"Siglent Technologies SDS1102CML+ Digital Storage Oscilloscope, 100 MHz" },{
                   Sku: 2,NomProd: "Samsung UN-55J5500 ",Ctg: "AV",
                   Img:"Image/pantalla1.jpg",Popular: 4 ,Precio:11499 ,
                   Descripcion:"Televisor de LED 55 pulgadas, Smart TV, Full HD, HDMI, USB"},{
@@ -37,7 +37,7 @@ app.factory('Lista',['$http',function($http){
                   Sku: 11,NomProd: "Function Generator with Counter",Ctg: "IDM",
                   Img:"Image/Generador.jpg",Popular: 2 ,Precio: 4811.90,
                   Descripcion:"GW Instek AFG-2105 Arbitrary DDS Function Generator with Counter, Sweep, AM, FM and FSK Modulation, 0.1Hz to 5MHz Frequency Range"},{
-                  Sku: 12,NomProd: "DBPOWER T22 HD Proyector de vídeo 2200",Ctg: "AV",
+                  Sku: 12,NomProd: "Proyector de vídeo 2200",Ctg: "AV",
                   Img:"Image/proyector1.jpg",Popular: 2 ,Precio: 3499,
                   Descripcion:"lumens SOPORTA 1080p con entrada de cable HDMI AV para Home Cinema Teatro Multimedia TV portátil Game SD iPad iPhone Smartphone Android, Blanco"},{
                   Sku: 13,NomProd: "HP All in One",Ctg: "CP",
