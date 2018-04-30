@@ -1,1 +1,34 @@
-<p>Busqueda works</p>
+<br>
+<div class="container">
+  <div class="row">
+
+
+  <div class="col-1"></div>
+  <div class="col-10">
+    <div class="card-columns ">
+      <div class="card" style="max-width: 18rem;"  ng-repeat="item in ListaItems | filter:search   " >
+        <h5 class="card-header">{{item.NomProd | RecorteNom}}</h5>
+        <div class="row">
+          <a   ng-controller="carritoCtrl" class="btn btn-link btn-sm col-md-3" ng-click="MandarCarrito(item)" role="button"><i class="fas fa-cart-arrow-down"></i></a>
+          <img class="card-img-top img-fluid col-md-7"   style="width:30px;height:100px;" ng-src="{{item.Img}}" >
+        </div>
+
+        <div class="card-body">
+
+          <p class="card-text">{{item.Descripcion | Recorte}}</p>
+          <p class="card-text">{{item.Precio | currency:"$"}} </p>
+        </div>
+        <div class="card-footer">
+        <a class="btn btn-secondary btn-sm" ng-click="AbrirModal(item)" role="button">Caracteristicas</a>
+        <a ng-controller="wishCtrl"class="btn btn-danger btn-sm" ng-click="MandarFavoritos(item)"role="button"><i class="far fa-heart"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-1"></div>
+  </div>
+</div>
+
+<div ng-include="'Pages/Modal_item.html'"></div>
