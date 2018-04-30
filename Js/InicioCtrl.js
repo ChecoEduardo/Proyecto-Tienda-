@@ -13,4 +13,6 @@ $scope.AbrirModal = function (items){
       $("#modal_item").modal();
   }
 
+
+
 }]);

@@ -15,7 +15,7 @@ app.config( function( $routeProvider ){
     })
     .when('/inicio',{
           templateUrl: 'Pages/Inicio.html',
-        controller: 'inicioCtrl'
+          controller: 'inicioCtrl'
     })
     .when('/favoritos',{
         templateUrl: 'Pages/Wish.html',
