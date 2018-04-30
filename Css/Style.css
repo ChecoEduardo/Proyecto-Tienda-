@@ -7,3 +7,22 @@
   cover; background-size: cover; }
   @media (max-width: 600px) {
     .carousel-item { height: 280px; } }
+
+    .SizeImage{
+      width: 150px;
+      height: 150px;
+
+    }
+
+    .peque {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+
+
+    .mediano{
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
