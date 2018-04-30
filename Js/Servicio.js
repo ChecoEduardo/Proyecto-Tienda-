@@ -96,8 +96,6 @@ app.factory('Lista',['$http',function($http){
                   Descripcion:"Maxsa motion-activated seguridad luz de inundación, 150 LED brillante con energía solar al aire última intervensión luz para garajes y yardas plata 44150"}
 
 
-
-
                 ]};
 
 
