@@ -25,8 +25,85 @@
   <br>
   <div class="row">
     <div class="col-4" >
+      Filtros:  {{busqueda.categoria}}
+      <br>
+      <ul class="list-group list-group-flush"  >
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <input   type="radio"ng-model="busqueda.Ctg" value="IDM" name="instumentos">
+              <label for="instumentos"> <i class="fas fa-tachometer-alt"></i>Instrumentos de Medicion</label>
+            <span class="badge badge-primary badge-pill">6</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center" >
+           <input   type="radio"ng-model="busqueda.Ctg" value="AV" name="Audio">
+             <label for="Audio"><i class="fas fa-tv"></i>  Audio y Video</label>
+            <span class="badge badge-primary badge-pill">6</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <input   type="radio"ng-model="busqueda.Ctg" value="CP" name="computadoras">
+                <label for="computadoras"><i class="fas fa-laptop"></i>Computadoras</label>
+            <span class="badge badge-primary badge-pill">6</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <input   type="radio"ng-model="busqueda.Ctg" value="ETR" name="entretenimiento">
+                <label for="entretenimiento"><i class="fas fa-futbol"></i>Entretenimiento</label>
+            <span class="badge badge-primary badge-pill">6</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+
+            <input   type="radio"ng-model="busqueda.Ctg" value="SR" name="seguridad">
+                <label for="seguridad"><i class="fas fa-lock"></i>Seguridad</label>
+            <span class="badge badge-primary badge-pill">6</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+
+            <input   type="radio"ng-model="busqueda.Ctg"  name="sf">
+                <label for="sf">Todas las categorias</label>
+                <span class="badge badge-primary badge-pill">36</span>
+          </li>
+        </ul>
+
+      <br>
+            Precio:
+      <br><br>
+      -$1000
+      -{{MenorMil.length}} Productos
+      <div class="progress">
+        <div class="progress-bar" role="progressbar"
+        style="width: {{MenorMil.length*100/36}}%;"
+        aria-valuenow="MenorMil.length"
+        aria-valuemin="0"
+        aria-valuemax="100"></div>
+      </div><br>
+       $1000-$3000
+       -{{menor3mil.length}} Productos
+      <div class="progress">
+        <div class="progress-bar" role="progressbar"
+        style="width: {{menor3mil.length*100/36}}%;"
+        aria-valuenow="10"
+        aria-valuemin="0"
+        aria-valuemax="100"></div>
+      </div><br>
+      $3000 - $5000
+      -{{Menor5mil.length}} Productos
+      <div class="progress">
+        <div class="progress-bar" role="progressbar"
+        style="width: {{Menor5mil.length*100/36}}%;"
+        aria-valuenow="45"
+        aria-valuemin="0"
+        aria-valuemax="100"></div>
+      </div><br>
+       $5000 +
+       -{{Mayor5mil.length}} Productos
+      <div class="progress">
+        <div class="progress-bar" role="progressbar"
+        style="width: {{Mayor5mil.length*100/36}}%;"
+        aria-valuenow="45"
+        aria-valuemin="0"
+        aria-valuemax="100"></div>
+      </div>
       
-    <p>Productos Más Populares</p>
+
+    <p  style="padding-top: 50px;">Productos Más Populares</p>
     <hr>
     <div class="card-columns peque"  >
      <div class="card"    ng-repeat="item in ArregloPopular" >
@@ -58,7 +135,7 @@
 
 
     <div class=" card-columns mediano" >
-      <div class="card  " style="max-width: 18rem;" ng-repeat="item in ListadoItem">
+      <div class="card  " style="max-width: 18rem;" ng-repeat="item in ListadoItem | filter:busqueda">
          <h5 class="card-header">{{item.NomProd | RecorteNom}}</h5>
           <div class="row">
             <a  ng-controller="carritoCtrl" class="btn btn-link btn-sm col-md-2" ng-click="MandarCarrito(item)" role="button"><i class="fas fa-cart-arrow-down"></i></a>
