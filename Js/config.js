@@ -25,7 +25,7 @@ app.config( function( $routeProvider ){
         templateUrl: 'Pages/About.html',
         controller: 'aboutCtrl'
     })
-    .when('/catgori',{
+    .when('/catgori/:Categoria',{
         templateUrl: 'Pages/Categorias.html',
         controller: 'categCtrl'
     })
