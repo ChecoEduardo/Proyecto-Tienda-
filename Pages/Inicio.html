@@ -25,6 +25,9 @@
   <br>
   <div class="row">
     <div class="col-4" >
+
+    <p>Productos Más Populares</p>
+    <hr>
     <div class="card-columns peque"  >
      <div class="card"    ng-repeat="item in ArregloPopular" >
        <p class="card-header">{{item.NomProd | RecorteNom}}</p>
@@ -80,3 +83,4 @@
 
   </div>
 </div>
+<div ng-include="'Pages/Modal_item.html'"></div>

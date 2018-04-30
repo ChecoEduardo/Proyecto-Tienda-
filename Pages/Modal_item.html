@@ -1,0 +1,26 @@
+
+    <div class="modal fade " id="modal_item">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-body">
+          <div class="card" style="width: 29rem;">
+            <div class="modal-header">
+              <h5 class="card-title ">{{itemsSel.NomProd}}</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
+            </div>
+
+            <div class="card-body">
+              <img class="card-img-top SizeImage" src="{{itemsSel.Img}}" alt="Card image cap">
+              <p class="card-text"> Sku: {{itemsSel.Sku}}      Categoria: {{itemsSel.Ctg}}</p>
+              <p class="card-text"> Descripcion: {{itemsSel.Descripcion}}</p>
+            </div>
+            <div class="modal-footer ">
+                <p class="card-text"> Precio: {{itemsSel.Precio | currency:"$"}}</p>
+            </div>
+            </div>
+          </div>
+
+        </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
