@@ -27,7 +27,7 @@ app.factory('Lista',['$http',function($http){
                   Descripcion:"Surround Sound Speakers, negro 150 W"},{
                   Sku: 8,NomProd: "Scheda CPU Magi",Ctg: "CP",
                   Img:"Image/CPU.jpg",Popular: 5 ,Precio: 4102.25,
-                  Descripcion:"Saeco 996530041077 (0317.804.00F) Scheda CPU Magi "},{
+                  Descripcion:"Saeco Scheda CPU Magi "},{
                   Sku: 9,NomProd: "Funda para Nintendo Switch 2017",Ctg: "ETR",
                   Img:"Image/nintendo.jpg",Popular: 3 ,Precio:299 ,
                   Descripcion:" Protección con Tope Shock-Absorción Carcasa, Negro"},{
@@ -50,7 +50,7 @@ app.factory('Lista',['$http',function($http){
                   Img:"Image/llave.jpg",Popular: 1 ,Precio:583.56 ,
                   Descripcion:"NU-SET 2 085-3 llave/tarjeta de soporte para la pared presionar el botón combinación de caja de seguridad, negro"},{
                   Sku: 16,NomProd: "Cautin De Lapiz Con Control De Potencia ",Ctg: "IDM",
-                  Img:"Image/lapiz.jpg",Popular: 3 ,Precio: 490.25,
+                  Img:"Image/lapiz.jpg",Popular: 5 ,Precio: 490.25,
                   Descripcion:"Cautin De Lapiz Con Control De Potencia "},{
                   Sku: 17,NomProd: "Cable HDMI",Ctg: "AV",
                   Img:"Image/cables1.jpg",Popular: 5 ,Precio:197 ,
@@ -80,7 +80,7 @@ app.factory('Lista',['$http',function($http){
                   Img:"Image/Seguridad1.jpg",Popular: 2 ,Precio:435.89 ,
                   Descripcion:"Master Lock 1535DWD Candado de Combinación con Letras para Recordar Fácilmente"},{
                   Sku: 26,NomProd: "Medidor Digital",Ctg: "IDM",
-                  Img:"Image/medidor.jpg",Popular: 3 ,Precio: 2509.50,
+                  Img:"Image/medidor.jpg",Popular: 5 ,Precio: 2509.50,
                   Descripcion:"klein tools CL800 AC/DC Auto-Ranging 600 Amp Digital medidor de abrazadera"},{
                   Sku: 27,NomProd: "Impresora Multifuncional",Ctg: "AV",
                   Img:"Image/impresora.jpg",Popular: 5 ,Precio:1274 ,
@@ -91,7 +91,7 @@ app.factory('Lista',['$http',function($http){
                   Sku: 29,NomProd: "CAJA DE CUBOS ABC",Ctg: "ETR",
                   Img:"Image/entretenimiento1.jpg",Popular: 4 ,Precio:370 ,
                   Descripcion:"Ivanna & Pau - CAJA DE CUBOS ABC"},{
-                  Sku: 30,NomProd: "Maxsa motion-activated seguridad luz de inundación",Ctg: "SR",
+                  Sku: 30,NomProd: "Seguridad luz de inundación",Ctg: "SR",
                   Img:"Image/lampara.jpg",Popular: 5 ,Precio: 2015.25,
                   Descripcion:"Maxsa motion-activated seguridad luz de inundación, 150 LED brillante con energía solar al aire última intervensión luz para garajes y yardas plata 44150"}
 
