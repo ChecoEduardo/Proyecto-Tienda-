@@ -1,1 +1,60 @@
-<p>Carrito works</p>
+<br>
+<div class="container-fluid ">
+  <div class="row">
+
+    <div class="card-columns  col-md-8">
+      <div class="card"   ng-repeat="item in carritoLS   " >
+        <h5 class="card-header">{{item.NomProd | RecorteNom}}</h5>
+        <div class="row">
+          <div class="col-md-1"></div>
+          <img class="card-img-top img-fluid SizeImage col-md-9" ng-src="{{item.Img}}" >
+        </div>
+
+        <div class="card-body">
+
+          <p class="card-text">{{item.Descripcion | Recorte}}</p>
+          <p class="card-text">{{item.Precio | currency:"$"}} </p>
+        </div>
+        <div class="card-footer">
+        <a class="btn btn-secondary btn-sm" ng-click="AbrirModal(item)" role="button">Caracteristicas</a>
+        <a ng-controller="wishCtrl"class="btn btn-danger btn-sm" ng-click="MandarFavoritos(item)"role="button"><i class="far fa-heart"></i></a>
+        <a class="btn btn-info btn-sm" ng-click="EliminarCarrito(carritoLS.indexOf(item),item)" role="button"><i class="fas fa-times-circle"></i></a>
+        </div>
+      </div>
+
+
+      </div>
+      <div class="col-md-4 ">
+        <div class="card border-primary mb-3 " style="max-width: 25rem;">
+
+          <div  class="card-header">
+            <i class="fas fa-cart-plus"></i> Carrito de compras</div>
+          <div class="card-body text-primary">
+            <h5 class="card-title">Productos: ({{carritoLS.length}})</h5>
+            <p class="card-text">Costo: {{total | currency:'$'}}</p>
+          </div>
+          <div class="card-footer bg-transparent border-primary">
+            <a href="#" class="btn btn-outline-primary btn-block">Proceder al pago</a>
+
+          </div>
+       </div>
+
+      </div>
+  </div>
+
+</div>
+
+<div class="container-fluid"   ng-show="Noitems">
+  <div class="row">
+        <div class="alert alert-success" role="alert">
+      <h4 class="alert-heading">No tienes ningun elemento en el carrito</h4>
+      <hr>
+</div>
+
+  </div>
+
+</div>
+
+
+
+    <div ng-include="'Pages/Modal_item.html'"></div>

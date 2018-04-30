@@ -21,18 +21,18 @@
   </a>
 </div>
 
-<div class="container-fluid" style="background:red;">
+<div class="container-fluid" >
   <br>
   <div class="row">
     <div class="col-4" >
-
+      
     <p>Productos Más Populares</p>
     <hr>
     <div class="card-columns peque"  >
      <div class="card"    ng-repeat="item in ArregloPopular" >
        <p class="card-header">{{item.NomProd | RecorteNom}}</p>
        <div class="row">
-         <a class="btn btn-link btn-sm col-md-3" ng-click="MandarCarrito(item)" role="button"><i class="fas fa-cart-arrow-down"></i></a>
+         <a   ng-controller="carritoCtrl" class="btn btn-link btn-sm col-md-3" ng-click="MandarCarrito(item)" role="button"><i class="fas fa-cart-arrow-down"></i></a>
          <img class="card-img-top img-fluid col-md-7"   style="width:30px;height:75px;" ng-src="{{item.Img}}" >
        </div>
        <div class="card-body ">
@@ -45,7 +45,7 @@
            <a class="btn btn-link btn-sm col-md-4" ng-click="AbrirModal(item)" role="button">Caracteristicas</a>
            <div class="col-md-4" ></div>
            <div class="col-md-2"></div>
-           <a class="btn btn-danger btn-sm col-md-2"ng-click="MandarFavoritos(item)"role="button"><i class="far fa-heart"></i></a>
+           <a  ng-controller="wishCtrl" class="btn btn-danger btn-sm col-md-2"ng-click="MandarFavoritos(item)"role="button"><i class="far fa-heart"></i></a>
          </div>
        </div>
 
@@ -61,7 +61,7 @@
       <div class="card  " style="max-width: 18rem;" ng-repeat="item in ListadoItem">
          <h5 class="card-header">{{item.NomProd | RecorteNom}}</h5>
           <div class="row">
-            <a class="btn btn-link btn-sm col-md-2" ng-click="MandarCarrito(item)" role="button"><i class="fas fa-cart-arrow-down"></i></a>
+            <a  ng-controller="carritoCtrl" class="btn btn-link btn-sm col-md-2" ng-click="MandarCarrito(item)" role="button"><i class="fas fa-cart-arrow-down"></i></a>
             <img class="card-img-top img-fluid SizeImage col-md-8" ng-src="{{item.Img}}" >
           </div>
           <div class="card-body ">
@@ -73,7 +73,7 @@
               <a class="btn btn-link btn-sm col-md-4" ng-click="AbrirModal(item)" role="button">Caracteristicas</a>
               <div class="col-md-4" ></div>
               <div class="col-md-2"></div>
-              <a class="btn btn-danger btn-sm col-md-2"ng-click="MandarFavoritos(item)"role="button"><i class="far fa-heart"></i></a>
+              <a  ng-controller="wishCtrl" class="btn btn-danger btn-sm col-md-2"ng-click="MandarFavoritos(item)"role="button"><i class="far fa-heart"></i></a>
             </div>
           </div>
       </div>
