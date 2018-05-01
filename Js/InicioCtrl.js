@@ -8,6 +8,8 @@ app.controller('inicioCtrl',['$scope','Lista' ,function($scope,Lista ){
     $scope.menor3mil=[];
     $scope.Menor5mil=[];
     $scope.Mayor5mil=[];
+     $scope.posicion=2;
+      $scope.pos=9;
 
 
 
@@ -37,6 +39,28 @@ console.log($scope.Menor5mil.length*100/36);
 console.log($scope.Mayor5mil.length*100/36);
 
 
+$scope.siguientes= function (){
+    if ($scope.ListadoItem.length > $scope.posicion){
+      $scope.posicion +=2;
+    }
+}
+$scope.Restar= function (){
+    if ( $scope.posicion> 2){
+      $scope.posicion -=2;}
+}
+
+$scope.previous=function (){
+  if ( $scope.pos> 9){
+    $scope.pos -=9;}
+
+}
+
+$scope.next = function(){
+  if ($scope.ListadoItem.length > $scope.pos){
+    $scope.pos +=9;
+  }
+
+}
 
 
 
