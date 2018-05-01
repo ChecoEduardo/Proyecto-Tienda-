@@ -23,6 +23,14 @@
         column-count: 2;
     }
 
+.colorLetra{
+
+      color: white;
+    }
+    .colorFS{
+        background: #37475a;
+    }
+
 
     .mediano{
         -webkit-column-count: 3;
