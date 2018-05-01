@@ -24,7 +24,7 @@
 <div class="container-fluid" >
   <br>
   <div class="row">
-    <div class="col-4" >
+    <div class="col-4"  >
       Filtros:  {{busqueda.categoria}}
       <br>
 
@@ -99,6 +99,7 @@
      <div class="card"    ng-repeat="item in ArregloPopular | limitTo:posicion  | limitTo:-2" >
        <p class="card-header">{{item.NomProd | RecorteNom}}</p>
        <div class="row">
+
          <a   ng-controller="carritoCtrl" class="btn btn-link btn-sm col-md-3" ng-click="MandarCarrito(item)" role="button"><i class="fas fa-cart-arrow-down"></i></a>
          <img class="card-img-top img-fluid col-md-7"   style="width:30px;height:75px;" ng-src="{{item.Img}}" >
        </div>
@@ -130,7 +131,7 @@
     </div>
 
 
-<div class="col-8">
+<div class="col-8"  >
 
 
     <div class=" card-columns mediano" >
