@@ -25,14 +25,17 @@ else{
       $scope.mensaje="Checa que todos los campos este llenos"
     }else if (nombre.length>20) {
       $scope.valido=true;
-      $scope.mensaje="El nombre es muy largo"
+      $scope.mensaje="El nombre es muy largo";
+    }else if (nombre.length<2) {
+      $scope.valido=true;
+      $scope.mensaje="El nombre es muy corto";
     }else if (!expresion.test(correo)) {
       $scope.valido=true;
-      $scope.mensaje="No es un correo valido"
+      $scope.mensaje="No es un correo valido";
     }
     else if(contra!=contra2){
       $scope.valido=true;
-      $scope.mensaje="Las contraseñas no son iguales"
+      $scope.mensaje="Las contraseñas no son iguales";
     }
 
   }
